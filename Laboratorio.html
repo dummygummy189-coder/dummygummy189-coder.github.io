@@ -1,0 +1,198 @@
+<!-- 
+	https://everycircuit.com/app/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Laboratorio</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsfq38SGTMg9BivYdH-0id2JxEqsjyG_lJmA&s">
+</head>
+<body>
+
+	<!-- Checkbox para mostrar/ocultar sidebar -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Header superior -->
+    <header class="topbar">
+        <div class="header-left">
+            <label for="menu-toggle" class="menu-btn">☰</label>
+            <h1 class=""><a href="index.html">Electrónica Básica</a></h1>
+        </div>
+        <!--<p>Contáctanos</p>-->
+        <img src="Logo.png" class="logo">
+    </header>
+
+    <!-- Menú / Sidebar -->
+    <aside class="sidebar">
+    	<!-- Buscador -->
+    	<div class="buscador">
+    		<input type="text" placeholder="Buscar..."></input>
+    	</div>
+
+    	<!-- Temario -->
+    	<div class="sidebar-content">
+    		<h3><center>Temario</center></h3>
+	    	<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="index.html">Electrónica</a></summary>
+		  		<div class="submenu">
+		  			<p><a href="index.html#circuitos">Circuitos Eléctricos</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Conceptos.html">Conceptos fundamentales</a></summary>
+		  		<div class="submenu">
+		  			<p><a href="Conceptos.html#carga">Carga eléctrica</a></p>
+		  			<p><a href="Conceptos.html#corriente">Corriente eléctrica</a></p>
+			    	<p><a href="Conceptos.html#potencia">Potencia eléctrica</a></p>
+			    	<p><a href="Conceptos.html#voltaje">Voltaje</a></p>
+			    	<p><a href="Conceptos.html#resistencia">Resistencia</a></p>
+			    	<p><a href="Conceptos.html#circuitos">Circuitos eléctricos</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Componentes.html">Componentes</a></summary>
+		  		<div class="submenu">
+			    	<p><a href="Componentes.html#fuente">Fuente</a></p>
+			    	<p><a href="Componentes.html#resistor">Resistor</a></p>
+			    	<p><a href="Componentes.html#capacitor">Capacitor</a></p>
+			    	<p><a href="Componentes.html#diodo">Diodo</a></p>
+			    	<p><a href="Componentes.html#transistor">Transistor</a></p>
+			    	<p><a href="Componentes.html#inductor">Inductor</a></p>
+			    	<p><a href="Componentes.html#indicador">Indicador</a></p>
+			    	<p><a href="Componentes.html#interruptor">Interruptor</a></p>
+			    	<p><a href="Componentes.html#conectores">Conectores</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Leyes.html">Leyes</a></summary>
+			  	<div class="submenu">
+			    	<p><a href="Leyes.html#ohm">Ley de Ohm</a></p>
+			    	<p><a href="Leyes.html#kirchhoff">Leyes de Kirchhoff</a></p>
+			  	</div>
+			</details>
+
+			<div class="sidebar-section">
+		  		<p class="submenu-title"><a href="Laboratorio.html">Laboratorio</a></p>
+			</div>
+
+			<div class="sidebar-section">
+		  		<p class="submenu-title"><a href="Actividades.html">Actividades</a></p>
+			</div>
+			<!--
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Actividades.html">Actividades</a></summary>
+			  	<div class="submenu">
+			    	<p><a href="Actividades.html#electronica">Electrónica</a></p>
+			    	<p><a href="Actividades.html#conceptos">Conceptos</a></p>
+			    	<p><a href="Actividades.html#componentes">Componentes</a></p>
+			    	<p><a href="Actividades.html#leyes">Leyes</a></p>
+			  	</div>
+			</details>
+			-->
+		</div>
+    </aside>
+
+    
+	<!-- Contenido -->
+	<main class="content">
+        <h1><center>Laboratorio y Simulaciones</center></h1>
+        <h2>
+        	¡Bienvenido a la sección práctica! <br>
+        	La electrónica no solo se lee, se experimenta. En este espacio, hemos seleccionado las mejores herramientas interactivas para que pongas a prueba lo aprendido sin necesidad de cables reales ni miedo a quemar componentes. <br>
+        	Estos simuladores funcionan como "laboratorios de arena" (sandboxes): puedes conectar, medir y observar el flujo de la energía en tiempo real.
+        </h2>
+        <section class="content-block">
+        	<div class="text">
+		        <h3></h3>
+		        <hr>
+		        <p>
+		        	Antes de tocar los instrumentos, imagina que la electricidad es como el agua en una tubería:
+			        	<li>Voltaje (V): Es la presión que empuja el agua.</li>
+			        	<li>Corriente (I): Es la cantidad de agua que fluye por segundo.</li>
+			        	<li>Resistencia (R): Es qué tan estrecho es el tubo.</li>
+			        	<section class="ej">
+			        		<section class="ej-content2">
+				        		<div class="ejemplo">
+				        			<h4>Ejemplo.</h4>
+				        			<hr>
+				        			<p>
+				        				Imagina que tienes una batería de 9V y un foco. Si conectas el foco directamente, ¡se quema! Necesitamos una resistencia para "frenar" la corriente.
+				        				Paso a paso del ejemplo:
+				        					<ol>
+				        						<li>Voltaje fijo: Usamos una batería de 9V.</li>
+				        						<li>Resistencia alta: Si ponemos una resistencia de 900 Omega, la corriente será pequeña ($0.01 A$). El foco brilla muy poco.</li>
+				        						<li>Resistencia baja: Si bajamos la resistencia a 100 $\Omega$, la corriente sube ($0.09 A$). El foco brilla intensamente.</li>
+				        					</ol>
+				        				Conclusión técnica: A menor resistencia, más corriente fluye (siempre que el voltaje sea el mismo).
+				        			</p>
+				        		</div>
+				        		<div class="ejemplo">
+				        			<h4>Ejercicio.</h4>
+				        			<hr>
+				        			<p>
+				        				Para este ejercicio, usaremos el Simulador PhET: Kit de Construcción de Circuitos CC que se presenta a continuación.
+				        					<ol>
+				        						<li>Arrastra una Batería, un Resistor y cables para formar un círculo cerrado.</li>
+				        						<li>Haz clic derecho en la batería y ajústala a 12V.</li>
+				        						<li>Saca el Amperímetro (el instrumento que mide la corriente) y colócalo en cualquier parte del cable.</li>
+				        					</ol>
+				        			</p>
+				        		</div>
+				        	</section>
+			        	</section>
+		        </p>
+		    </div>
+		    <!--
+		    <div>
+		    	<img style="width: ; height: ;" src="">
+		    </div>
+		    -->
+		</section>
+		<!---->
+		<div style="width: 100%;">
+			<iframe src="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_all.html?locale=es"></iframe>
+				<!- https://www.circuitlab.com/editor/#?id=7pq5wm&from=homepage ->
+		</div>
+		<!---->
+	</main>
+
+    <footer class="footer">
+	    <div class="footer-contenido">
+	        <h4>Referencias</h4>
+	        <ul class="referencias">
+	            <li>García, J. (2022). <em>Fundamentos de Circuitos Eléctricos</em>. Editorial Técnica.</li>
+	            <li>Khan Academy. (2023). Conceptos básicos de electricidad.</li>
+	            <li>Serway, R. & Jewett, J. (2018). <em>Física para Ciencias e Ingeniería</em>.</li>
+	        </ul>
+
+	        <p class="copyright">
+	            © 2026 Proyecto Educativo – Electrónica Básica
+	        </p>
+	    </div>
+	</footer>
+
+
+	<script>
+		/* ABRE SOLO UN SUBMENÚ DEL SIDEBAR */
+        const sections = document.querySelectorAll(".sidebar-section");
+        sections.forEach(section => {
+            section.addEventListener("toggle", () => {
+                if (section.open) {
+                    sections.forEach(other => {
+                        if (other !== section) {
+                            other.removeAttribute("open");
+                        }
+                    });
+                }
+            });
+        });
+	</script>
+
+</body>
+</html>

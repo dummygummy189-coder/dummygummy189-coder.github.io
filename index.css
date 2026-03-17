@@ -1,0 +1,598 @@
+/*  IMPORTACIONES  */
+    @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Poiret+One&display=swap');
+
+
+
+/*  GENERAL  */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: '';
+        background-image: 
+          linear-gradient(rgba(155,108,180,0.3), rgba(155,108,180,0.3)),
+          url('https://img.freepik.com/vector-premium/diseno-patron-o-fondo-computadora_260839-108.jpg');
+        /*background-size: cover;*/
+        background-attachment: fixed;
+    }
+
+
+
+/* MENSAJE DE BIENVENIDA */
+    /* Fondo oscuro oculto */
+    .popup-overlay {
+        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    /* Caja del popup */
+    .popup-content {
+        background-image: 
+          linear-gradient(rgba(162,114,176,0.8), rgba(162,114,176,0.8)),
+          url('https://wallpapers.com/images/hd/minimalist-technology-1920-x-1200-wallpaper-5upk8gqub8mkiu3w.jpg');
+        background-size: cover;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        max-width: 55%;
+    }
+    /* Clase para mostrar el popup */
+    .popup-overlay.show {
+        display: flex;
+    }
+    .popup-content h2{
+        font-family: 'Poiret One';
+        color: white;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+    .popup-content p{
+        font-family: 'Diphylleia';
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        margin: 0 50px 0 50px;
+    }
+    .popup-content button{
+        background-color: rgba(255,255,255,.5);
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: 'Poiret One';
+    }
+    .popup-content button:hover {
+        background-color:rgba(186,151,196,.9);
+        color: white;
+    }
+
+
+
+/*  HEADER / TOPBAR  */
+    /*Ocultar el checkbox del sidebar*/
+    #menu-toggle {
+        display: none;
+    }
+    .topbar {
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        background-image: 
+          linear-gradient(rgba(162,114,176,0.6), rgba(162,114,176,0.6)),
+          url('https://wallpapers.com/images/hd/minimalist-technology-1920-x-1200-wallpaper-5upk8gqub8mkiu3w.jpg');
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        justify-content: space-between;
+    }
+    .header-left {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        height: 55px;
+        align-items: center;
+        object-fit: contain;
+        background: rgba(255,255,255,.5);
+        border-radius: 10px;
+        padding: 1px 8px 3px 8px;
+    }
+    .topbar a {
+        text-decoration: none;
+        color: black;
+    }
+    .topbar h1 {
+        margin-left: 10px;
+        font-size: 20px;
+        font-family: '';
+        background: rgba(255,255,255,.5);
+        border-radius: 10px;
+        padding: 1px 8px 3px 8px; /*arriba, derecha, abajo, izquierda*/
+    }
+    /* Botón menú */
+    .menu-btn {
+        font-size: 22px;
+        cursor: pointer;
+        border-radius: 10px;
+        background: rgba(255,255,255,.5);
+        padding: 1px 8px 3px 8px;
+    }
+
+
+
+/*  MENÚ / SIDEBAR  */
+    .sidebar {
+        position: fixed;
+        top: 75px; /*75px*/
+        left: 0px;
+        width: 260px;
+        height: calc(100vh - 90px);/*calc(100vh - 90px)*/
+        background-image: 
+          linear-gradient(rgba(162,114,176,0.6), rgba(162,114,176,0.6)),
+          url('https://wallpapers.com/images/hd/minimalist-technology-1920-x-1200-wallpaper-5upk8gqub8mkiu3w.jpg');
+        background-size: cover;
+        padding: 20px;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        overflow-y: auto;
+        transition: transform 0.3s ease;
+    }
+    /* Ocultar sidebar cuando checkbox está activo */
+    #menu-toggle:checked ~ .sidebar {
+        transform: translateX(-100%);
+    }
+    /* Buscador */
+    .buscador {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .buscador input {
+        width: 100%;
+        padding: 10px 12px 10px 10px;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        outline: none;
+        transition: 0.2s ease;
+        background-color: rgba(255,255,255,.5);
+    }
+    .buscador input:focus {
+        /*border-color: #4a90e2;*/
+        /*box-shadow: 0 0 0 3px rgba(74,144,226,0.15);*/
+        color: black;
+    }
+    /* Secciones */
+    .sidebar-content {
+        margin-bottom: 15px;
+        padding: 15px;
+        background: rgba(255,255,255,.5);
+        border-radius: 14px;
+        border: 1px solid #e6e8f0;
+        font-family: 'Poiret One';
+        /* ↓ Opcional */
+        max-height: 465px;
+    }
+    .sidebar-content h3 {
+        font-size: 20px;
+        color: black;
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+    }
+    .sidebar-content a {
+        text-decoration: none;
+        color: black;
+    }
+    /*  */
+    .sidebar-section {
+        /*padding: 8px;
+        border-radius: 14px;
+        border: 1px solid #e6e8f0;
+        margin: 5px;*/
+        padding: 10px 12px;
+        border-radius: 14px;
+        border: 1px solid #e6e8f0;
+        margin: 8px 0;
+        background: rgba(255,255,255,.5);
+        transition: all 0.3s ease;
+    }
+    .sidebar.closed {
+        transform: translateX(0);/*(-100%)*/
+    }
+    /* Submenus */
+    .submenu-title {
+        /*display: block;*/
+        /*text-align: center;*/
+        /*font-size: 15px;*/
+        font-weight: bold;
+        margin: 8px 0;
+        cursor: pointer;
+    }
+    .submenu {
+        position: fixed;
+        min-width: 160px;
+        background: white;
+        padding: 4px 9px 2px 2px;
+        border-radius: 10px;
+        /* ↑ Opcional */
+        margin-left: 18px;
+        margin-top: 6px;
+          /* Animación de despliegue opcional */
+        transform: translateX(-10px);
+        opacity: 0;
+        transition: all 0.25s ease;
+    }
+    /* Animación de despliegue opcional */
+    details[open] .submenu {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    /**/
+    .submenu a {
+        display: flex;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: black;
+        background: white;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 3px;
+        transition: all 0.2s ease;
+    }
+    .submenu a:hover {
+        background-color:rgba(186,151,196,.9);
+        transform: translateX(4px);
+    }
+
+
+
+/*  CONTENIDO  */
+    .content {
+        margin-top: 85px;
+        margin-left: 290px;
+        margin-bottom: 30px;
+        margin-right: 30px;
+        padding: 40px;
+        width: 78.5%;
+        transition: margin-left 0.3s ease;
+        background: rgba(255,255,255,.5);
+        border-radius: 20px;
+        /* font-family: 'Offside';
+        font-size: 13px;*/
+    }
+    .text {
+        font-family: 'Poiret One';
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .content-block {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .content-block img {
+        border-radius: 12px;
+    }
+    /* Desplazar el contenido cuando el menú está abierto/cerrado */
+    #menu-toggle:checked ~ .content {
+        margin-left: 30px;
+        width: 95.8%;
+    }
+    .content h1 {
+        font-family: 'Diphylleia';
+        color: white;
+        font-size: 40px;
+        border-radius: 10px;
+        background-image: 
+            linear-gradient(rgba(162,114,176,0.6), rgba(162,114,176,0.6)),
+            url('https://wallpapers.com/images/hd/minimalist-technology-1920-x-1200-wallpaper-5upk8gqub8mkiu3w.jpg');
+        background-size: cover;
+        padding: 0 0 7px 0;
+        margin-bottom: 5px;
+    }
+    .content h2 {
+        font-family: 'Poiret One';
+        color: white;
+        font-size: 16px;
+        border-radius: 10px;
+        background-image: 
+            linear-gradient(rgba(162,114,176,0.9), rgba(162,114,176,0.9)),
+            url('https://wallpapers.com/images/hd/minimalist-technology-1920-x-1200-wallpaper-5upk8gqub8mkiu3w.jpg');
+        background-size: cover;
+        padding: 12px 12px 12px 12px;
+        margin-bottom: 14px;
+    }
+    .content h3 {
+        font-family: 'Diphylleia';
+        font-size: 25px;
+    }
+    .content h4 {
+        font-family: 'Diphylleia';
+        font-size: 18px;
+        padding: 0 0 3px 0;
+    }
+    /*.content p {
+      margin-right: 10%;
+    }*/
+    .content li {
+        margin-left: 35px;
+    }
+    hr {
+        margin: 2px 0 8px 0;
+        padding: 0;
+        width: 80%;
+        position: relative;
+        border-color: purple;
+        left: 10px;
+    }
+
+
+
+/* APARTADO DE ACTIVIDADES */
+    iframe {
+        width: 100%; 
+        height: 500px;
+        border-radius: 30px;
+    }
+    .actividades-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* espacio suficiente */
+        gap: 25px;
+        justify-content: center;
+    }
+    /* Cards */
+    .card {
+        background-image: 
+            linear-gradient(rgba(162,114,176,0.9), rgba(162,114,176,0.8)),
+            url('https://wallpapers.com/images/hd/minimalist-technology-1920-x-1200-wallpaper-5upk8gqub8mkiu3w.jpg');
+        background-size: cover;
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        min-width: 180px;
+    }
+    .card .contenido {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+    .card.activa .contenido {
+        max-height: 700px;
+    }
+    /* Activa arriba */
+    .card.activa {
+        grid-column: 1 / -1; /* ocupa toda la fila */
+        grid-row: 1;        /* SIEMPRE fila 1 */
+    }
+    .actividades-container.modo-activo {
+        grid-template-columns: repeat(5, auto);
+        justify-content: center;
+    }
+    /* Las demás abajo en fila 2 */
+    .actividades-container.modo-activo .card:not(.activa) {
+        grid-row: 2;
+    }
+    .actividades-container.modo-activo .card:not(.activa) h3 {
+        font-size: 18px;
+    }
+
+
+
+/*  TABLA CONCEPTUAL / CONCEPTOS Y COMPONENTES  */
+    .tabla-conceptual {
+        display: grid;
+        gap: 15px;
+        /**/
+        background: rgba(255, 255, 255, 0.75);
+        border: 2px solid #7b4c9f;
+        border-radius: 18px;
+        padding: 20px;
+        backdrop-filter: blur(4px);
+    }
+    .fila {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        background: rgba(255,255,255,0.6);
+        padding: 15px 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        border-bottom: 1px solid rgba(123, 76, 159, 0.3);
+    }
+    .fila:last-child {
+        border-bottom: none;
+    }
+    .encabezado {
+        font-weight: bold;
+        background: transparent;
+        box-shadow: none;
+        border-bottom: 2px solid #7b4c9f;
+        background: rgba(255,255,255,0.6);
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .concepto {
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-bottom: 2px solid #7b4c9f;
+        padding-bottom: 5px;
+    }
+    .descripcion {
+        padding: 0 15px;
+    }
+    .foto img {
+        width: 100%;
+        height: 150px;
+        border-radius: 20px;
+    }
+
+
+
+/*  TABLA DE CLASIFICACIÓN DE LOS CIRCUITOS  */
+    .tabla-clasificacion {
+        max-width: 1200px;
+        margin: 80px auto;
+        padding: 40px;
+        background: rgba(255,255,255,0.9);
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+    .tabla-clasificacion h3 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #5e3c73;
+    }
+    .tabla-contenedor {
+        overflow-x: auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 800px;
+    }
+    thead {
+        background: #7a5c8e;
+        color: white;
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #d4c6df; /* líneas visibles suaves */
+    }
+    th {
+        font-weight: bold;
+        text-align: center;
+    }
+    tbody tr:nth-child(even) {
+        background: #f4eef7;
+    }
+    tbody tr:hover {
+        background: #e8def0;
+        transition: 0.2s ease;
+    }
+    td[rowspan] {
+        background: #f0e6f5;
+        font-weight: bold;
+    }
+
+
+
+/* EJERCICIOS EN LEYES / EJEMPLOS/EJERCICIOS DE LABORATORIO */
+    .ej {
+        font-family: 'Poiret One';
+        font-weight: bold;
+        font-size: 15px;
+        padding: 8px;
+    }
+    .ej-content {
+        /*border: 1px solid #ccc;*/
+        border-radius: 10px;
+        display: flex;
+        gap: 20px;          /* espacio entre ejercicios */
+        justify-content: space-between;
+        flex-wrap: wrap;    /* evita que se rompa en pantallas pequeñas */
+    }
+    .ejercicio{
+        padding: 20px;
+        margin: 20px 0;
+        flex: 1;            /* todos ocupan el mismo espacio */
+        min-width: 250px;   /* evita que se hagan demasiado pequeños */
+        background: rgba(255,255,255,0.6);
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .respuesta {
+        padding: 10px 12px 10px 10px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        outline: none;
+        transition: 0.2s ease;
+        background-color: rgba(255,255,255,.5);
+    }
+    .respuesta:focus {
+        border-color: #ba97c4; /* El color lila que ya usas en el hover */
+        box-shadow: 0 0 5px rgba(186, 151, 196, 0.5);
+        background-color: white;
+    }
+    .ej button{background-color: rgba(255,255,255,.5);
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Poiret One';
+    }
+    .ej button:hover {
+        background-color:rgba(186,151,196,.9);
+        color: white;
+    }
+    .feedback{
+        margin-top: 15px;
+        padding: 10px;
+        border-left: 4px solid rgba(155,108,180);
+    }
+    /**/
+    .ej-content2 {
+        /*border: 1px solid #ccc;*/
+        border-radius: 10px;
+        display: flex;
+        gap: 20px;          /* espacio entre ejercicios */
+        justify-content: space-between;
+        flex-wrap: wrap;    /* evita que se rompa en pantallas pequeñas */
+    }
+    .ejemplo {
+        padding: 20px;
+        margin: 20px 0;
+        flex: 1;            /* todos ocupan el mismo espacio */
+        min-width: 400px;   /* evita que se hagan demasiado pequeños */
+        background: rgba(255,255,255,0.6);
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+
+
+/*  FOOTER */
+    .footer {
+      color: white;
+      margin-left: 290px;
+      margin-bottom: 30px;
+      margin-right: 30px;
+      padding: 40px;
+      width: 78.5%;
+      transition: margin-left 0.3s ease;
+      background-image: 
+        linear-gradient(rgba(162,114,176,0.6), rgba(162,114,176,0.6)),
+        url('https://wallpapers.com/images/hd/minimalist-technology-1920-x-1200-wallpaper-5upk8gqub8mkiu3w.jpg');
+      background-size: cover;
+      border-radius: 10px;
+    }
+    /* Desplazar el contenido cuando el menú está abierto/cerrado */
+    #menu-toggle:checked ~ .footer {
+      margin-left: 30px;
+      width: 95.8%;
+    }
+
+
+
+/* SCROLLBAR / BARRA DE DESPLAZAMIENTO */
+    

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conceptos fundamentales</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsfq38SGTMg9BivYdH-0id2JxEqsjyG_lJmA&s">
+</head>
+<body>
+
+	<!-- Checkbox para mostrar/ocultar sidebar -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Header superior -->
+    <header class="topbar">
+        <div class="header-left">
+            <label for="menu-toggle" class="menu-btn">☰</label>
+            <h1 class=""><a href="index.html">Electrónica Básica</a></h1>
+        </div>
+        <!--<p>Contáctanos</p>-->
+        <img src="Logo.png" class="logo">
+    </header>
+
+    <!-- Menú / Sidebar -->
+    <aside class="sidebar">
+    	<!-- Buscador -->
+    	<div class="buscador">
+    		<input type="text" placeholder="Buscar..."></input>
+    	</div>
+
+    	<!-- Temario -->
+    	<div class="sidebar-content">
+    		<h3><center>Temario</center></h3>
+	    	<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="index.html">Electrónica</a></summary>
+		  		<div class="submenu">
+		  			<p><a href="index.html#circuitos">Circuitos Eléctricos</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Conceptos.html">Conceptos fundamentales</a></summary>
+		  		<div class="submenu">
+		  			<p><a href="Conceptos.html#carga">Carga eléctrica</a></p>
+		  			<p><a href="Conceptos.html#corriente">Corriente eléctrica</a></p>
+			    	<p><a href="Conceptos.html#potencia">Potencia eléctrica</a></p>
+			    	<p><a href="Conceptos.html#voltaje">Voltaje</a></p>
+			    	<p><a href="Conceptos.html#resistencia">Resistencia</a></p>
+			    	<p><a href="Conceptos.html#circuitos">Circuitos eléctricos</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Componentes.html">Componentes</a></summary>
+		  		<div class="submenu">
+			    	<p><a href="Componentes.html#fuente">Fuente</a></p>
+			    	<p><a href="Componentes.html#resistor">Resistor</a></p>
+			    	<p><a href="Componentes.html#capacitor">Capacitor</a></p>
+			    	<p><a href="Componentes.html#diodo">Diodo</a></p>
+			    	<p><a href="Componentes.html#transistor">Transistor</a></p>
+			    	<p><a href="Componentes.html#inductor">Inductor</a></p>
+			    	<p><a href="Componentes.html#indicador">Indicador</a></p>
+			    	<p><a href="Componentes.html#interruptor">Interruptor</a></p>
+			    	<p><a href="Componentes.html#conectores">Conectores</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Leyes.html">Leyes</a></summary>
+			  	<div class="submenu">
+			    	<p><a href="Leyes.html#ohm">Ley de Ohm</a></p>
+			    	<p><a href="Leyes.html#kirchhoff">Leyes de Kirchhoff</a></p>
+			  	</div>
+			</details>
+
+			<div class="sidebar-section">
+		  		<p class="submenu-title"><a href="Laboratorio.html">Laboratorio</a></p>
+			</div>
+
+			<div class="sidebar-section">
+		  		<p class="submenu-title"><a href="Actividades.html">Actividades</a></p>
+			</div>
+			<!--
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Actividades.html">Actividades</a></summary>
+			  	<div class="submenu">
+			    	<p><a href="Actividades.html#electronica">Electrónica</a></p>
+			    	<p><a href="Actividades.html#conceptos">Conceptos</a></p>
+			    	<p><a href="Actividades.html#componentes">Componentes</a></p>
+			    	<p><a href="Actividades.html#leyes">Leyes</a></p>
+			  	</div>
+			</details>
+			-->
+		</div>
+    </aside>
+
+
+	<!-- Contenido -->
+	<main class="content">
+        <h1><center>Conceptos Fundamentales</center></h1>
+    	<h2>
+    		Para comprender el funcionamiento de los circuitos eléctricos y los dispositivos electrónicos, es indispensable dominar una serie de conceptos fundamentales que constituyen la base de la electrónica.<br>
+    		Magnitudes como el voltaje, la corriente y la resistencia no solo describen el comportamiento de la energía eléctrica, sino que también permiten analizar, diseñar y predecir el funcionamiento de distintos sistemas eléctricos.<br>
+    		En esta sección se presentan los principios esenciales que todo estudiante de nivel universitario debe conocer para desarrollar un entendimiento sólido de la electrónica básica. Estos conceptos servirán como base para el estudio de temas más avanzados, como el análisis de circuitos, el comportamiento de componentes electrónicos y la resolución de problemas prácticos.
+    	</h2>
+
+        <div class="text">
+        	<section class="tabla_conceptual">
+			<div class="fila encabezado">
+			    <div>Concepto</div>
+			    <div>Descripción</div>
+			    <div>Ilustración</div>
+			</div>
+
+			<div class="fila" id="#carga">
+				<div class="concepto">Carga eléctrica</div>
+				<div class="descripcion">
+					Es como la “molécula” de la electricidad: existen partículas con carga positiva (como los protones) y negativa (como los electrones). Cuando estas cargas se acumulan o se mueven, se produce la electricidad que conocemos.<br>
+		        	Ejemplo sencillo: Imagínala como pequeñas bolitas con energía que pueden atraerse o repelerse entre sí.
+				</div>
+				<div class="foto">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRJkz3f-9YRESh0VwU8RzjQehpx4nu_CNxxA&s">
+				</div>
+			</div>
+			<div class="fila" id="#corriente">
+				<div class="concepto">Corriente eléctrica</div>
+				<div class="descripcion">
+					Es el flujo de cargas eléctricas (generalmente electrones) a través de un conductor (como un cable de cobre). Se mide en Amperios (A).<br>
+		        	Ejemplo sencillo: Como el agua que corre por una tubería – la corriente es la cantidad de agua que pasa por segundo.
+				</div>
+				<div class="foto">
+					<img src="https://electricidad-basica.com/wp-content/uploads/2023/04/Corriente-electrica.jpg">
+				</div>
+			</div>
+			<div class="fila" id="#potencia">
+				<div class="concepto">Potencia eléctrica</div>
+				<div class="descripcion">
+					Es la cantidad de energía que usa o produce un dispositivo por segundo. Se mide en Watts (W). Depende del voltaje y la corriente (Potencia = Voltaje × Corriente).<br>
+		        	Ejemplo sencillo: Como la capacidad de una bomba para mover agua – más presión y más flujo significan más potencia.
+				</div>
+				<div class="foto">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-5YiHLWy3xknVB-00LWBRK8z19qC6HFgPnQ&s">
+				</div>
+			</div>
+			<div class="fila" id="#voltaje">
+				<div class="concepto">Voltaje</div>
+				<div class="descripcion">
+					También llamada tensión, es la fuerza que empuja a las cargas para que circulen y formen la corriente. Se mide en Voltios (V).<br>
+					Ejemplo sencillo: Como la presión del agua en una tubería – cuanto mayor sea la presión, más rápido correrá el agua.
+				</div>
+				<div class="foto">
+					<img src="https://grupopc.com/wp-content/uploads/2024/06/alto-bajo-voltaje.jpg">
+				</div>
+			</div>
+			<div class="fila" id="#resistencia">
+				<div class="concepto">Resistencia</div>
+				<div class="descripcion">
+					Es la oposición que ofrece un material al paso de la corriente eléctrica. Se mide en Ohmios (Ω). Algunos materiales (como el cobre) tienen poca resistencia (son conductores), mientras que otros (como el plástico) tienen mucha (son aislantes).<br>
+					Ejemplo sencillo: Como una válvula estrecha en una tubería que dificulta el paso del agua.
+				</div>
+				<div class="foto">
+					<img src="https://ielectel.com/wp-content/uploads/2024/08/Resistencia-electrica-concepto-tipos.png">
+				</div>
+			</div>
+			<div class="fila" id="circuitos">
+				<div class="concepto">Circuitos eléctricos</div>
+				<div class="descripcion">
+					Es el camino cerrado por donde circula la corriente eléctrica. Para que funcione, necesita una fuente de voltaje (como una batería), conductores (cables) y un dispositivo que use la energía (como una bombilla). Si el camino se abre (por ejemplo, con un interruptor apagado), la corriente no circula.<br>
+					Ejemplo sencillo: Como un circuito cerrado de tuberías donde el agua puede circular desde un tanque hasta un grifo y volver.
+				</div>
+				<div class="foto">
+					<img src="https://www.abc.com.py/resizer/v2/https%3A%2F%2Farc-anglerfish-arc2-prod-abccolor.s3.amazonaws.com%2Fpublic%2FBGNZLHYCWVDOXLJSDEGHWC52OM.jpg?auth=1518c77eda5415c7a40e052468326d96a96052e93e9412f9ad86f83453943f33&width=1200&smart=true">
+				</div>
+			</div>
+			</section>
+		</div>
+	</main>
+
+    <footer class="footer">
+	    <div class="footer-contenido">
+	        <h4>Referencias</h4>
+	        <ul class="referencias">
+	            <li>García, J. (2022). <em>Fundamentos de Circuitos Eléctricos</em>. Editorial Técnica.</li>
+	            <li>Khan Academy. (2023). Conceptos básicos de electricidad.</li>
+	            <li>Serway, R. & Jewett, J. (2018). <em>Física para Ciencias e Ingeniería</em>.</li>
+	        </ul>
+
+	        <p class="copyright">
+	            © 2026 Proyecto Educativo – Electrónica Básica
+	        </p>
+	    </div>
+	</footer>
+
+
+	<script>
+		/* ABRE SOLO UN SUBMENÚ DEL SIDEBAR */
+        const sections = document.querySelectorAll(".sidebar-section");
+        sections.forEach(section => {
+            section.addEventListener("toggle", () => {
+                if (section.open) {
+                    sections.forEach(other => {
+                        if (other !== section) {
+                            other.removeAttribute("open");
+                        }
+                    });
+                }
+            });
+        });
+	</script>
+</body>
+</html>

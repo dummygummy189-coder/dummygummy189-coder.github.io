@@ -1,0 +1,362 @@
+<!-- 
+	Códigos de "Pruebas_3v
+
+	→Canal de Yputube que podría ser útil: https://www.youtube.com/@ferminflores1818
+	→Pagina para colores: https://htmlcolorcodes.com
+	→Logo UAM Lerma en png: https://www.ler.uam.mx/UAML_Comunidad/wp-content/uploads/2024/11/variacion7Ler.png
+	→https://invdes.com.mx/wp-content/uploads/2017/04/26-04-17-circuitos-electricos.jpg
+	→https://www.imb-cnm.csic.es/sites/default/files/styles/image_1200/public/content/image/2025/10/23/28/INFOGRAFIA_CIRCUITOS-INTEGRADOS_primaria_ESP.jpg?itok=3L6BpgWM
+
+	https://es.stackoverflow.com/questions/532017/c%C3%B3mo-hacer-una-l%C3%ADnea-de-tarjetas-en-html
+	https://devsnap.me/css-cards
+		https://codepen.io/Jhonierpc/pen/MWgBJpy
+		https://codepen.io/steveschoger/pen/YbQXGq
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Electrónica básica</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+	<!-- Popup -->
+    <div id="welcome-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>¡Bienvenid@ a este espacio de aprendizaje dedicado a la Electrónica Básica!</h2>
+            <br>
+            <p>
+            El objetivo de esta página es proporcionar una guía clara y estructurada sobre los conceptos y principios fundamentales de la electrónica a nivel universitario.<br>
+            Aquí encontrarás explicaciones teóricas, ejemplos prácticos y recursos interactivos que te permitirán comprender el funcionamiento de los circuitos eléctricos y los componentes que los conforman.<br>
+            Esta plataforma busca complementar el aprendizaje en el aula, facilitando el estudio autónomo y reforzando los fundamentos necesarios para cursos más avanzados.
+            </p>
+            <br>
+            <button id="close-popup">Cerrar</button>
+        </div>
+    </div>
+
+	<!-- Checkbox para mostrar/ocultar sidebar -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Header superior -->
+    <header class="topbar">
+        <div class="header-left">
+            <label for="menu-toggle" class="menu-btn">☰</label>
+            <h1 class=""><a href="index.html">Electrónica Básica</a></h1>
+        </div>
+        <!--<p>Contáctanos</p>-->
+        <img src="Logo.png" class="logo">
+    </header>
+
+    <!-- Menú / Sidebar -->
+    <aside class="sidebar">
+    	<!-- Buscador -->
+    	<div class="buscador">
+    		<input type="text" id="barraBusqueda" placeholder="Buscar..."></input>
+    	</div>
+
+    	<!-- Temario -->
+    	<div class="sidebar-content">
+    		<h3><center>Temario</center></h3>
+	    	<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="index.html">Electrónica</a></summary>
+		  		<div class="submenu">
+		  			<p><a href="index.html#circuitos">Circuitos Eléctricos</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Conceptos.html">Conceptos fundamentales</a></summary>
+		  		<div class="submenu">
+		  			<p><a href="Conceptos.html#carga">Carga eléctrica</a></p>
+		  			<p><a href="Conceptos.html#corriente">Corriente eléctrica</a></p>
+			    	<p><a href="Conceptos.html#potencia">Potencia eléctrica</a></p>
+			    	<p><a href="Conceptos.html#voltaje">Voltaje</a></p>
+			    	<p><a href="Conceptos.html#resistencia">Resistencia</a></p>
+			    	<p><a href="Conceptos.html#circuitos">Circuitos eléctricos</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Componentes.html">Componentes</a></summary>
+		  		<div class="submenu">
+			    	<p><a href="Componentes.html#fuente">Fuente</a></p>
+			    	<p><a href="Componentes.html#resistor">Resistor</a></p>
+			    	<p><a href="Componentes.html#capacitor">Capacitor</a></p>
+			    	<p><a href="Componentes.html#diodo">Diodo</a></p>
+			    	<p><a href="Componentes.html#transistor">Transistor</a></p>
+			    	<p><a href="Componentes.html#inductor">Inductor</a></p>
+			    	<p><a href="Componentes.html#indicador">Indicador</a></p>
+			    	<p><a href="Componentes.html#interruptor">Interruptor</a></p>
+			    	<p><a href="Componentes.html#conectores">Conectores</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Leyes.html">Leyes</a></summary>
+			  	<div class="submenu">
+			    	<p><a href="Leyes.html#ohm">Ley de Ohm</a></p>
+			    	<p><a href="Leyes.html#kirchhoff">Leyes de Kirchhoff</a></p>
+			  	</div>
+			</details>
+
+			<div class="sidebar-section">
+		  		<p class="submenu-title"><a href="Laboratorio.html">Laboratorio</a></p>
+			</div>
+
+			<div class="sidebar-section">
+		  		<p class="submenu-title"><a href="Actividades.html">Actividades</a></p>
+			</div>
+			<!--
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Actividades.html">Actividades</a></summary>
+			  	<div class="submenu">
+			    	<p><a href="Actividades.html#electronica">Electrónica</a></p>
+			    	<p><a href="Actividades.html#conceptos">Conceptos</a></p>
+			    	<p><a href="Actividades.html#componentes">Componentes</a></p>
+			    	<p><a href="Actividades.html#leyes">Leyes</a></p>
+			  	</div>
+			</details>
+			-->
+		</div>
+    </aside>
+
+
+	<!-- Contenido -->
+	<main class="content">
+        <h1><center>Electrónica Básica</center></h1>
+        <br>
+        <section class="content-block">
+        	<div class="text">
+		        <h3>¿Qué es la electrónica?</h3>
+		        <hr>
+		        <p>
+		        	La electrónica es el área de la ciencia y la tecnología que se encarga de controlar y utilizar la electricidad para crear dispositivos que procesan información, generan señales o realizan tareas específicas; es rama de la física y la ingeniería que estudia cómo controlar, manipular y utilizar el flujo de electrones (partículas cargadas eléctricamente) en materiales como semiconductores, conductores y aislantes.<br>
+		        	En palabras sencillas: se trata de entender cómo funcionan los dispositivos eléctricos y electrónicos que usamos todos los días, desde un celular hasta un refrigerador. Se trata de hacer que la electricidad “trabaje” para nosotros de formas útiles.<br>
+					A diferencia de la electricidad, que se centra en la generación y transmisión de energía, la electrónica se enfoca en procesar información y controlar señales para hacer que las máquinas realicen tareas específicas.
+		        </p>
+    		</div>
+    		<div>
+    			<img style=" width: 300px; height: 200px;" src="https://aprende.com/wp-content/uploads/2021/10/que-es-la-electronica.jpg">
+    		</div>
+	    </section>
+       	<br><BR>
+       	<section class="content-block">
+       		<div>
+		    	<img style=" width: 300px; height: 200px;" src="https://electronicaonline.net/wp-content/uploads/2024/03/Electronica-que-es.jpg">
+		    </div>
+	        <div class="text">
+	        	<h3>¿Para qué sirve la electrónica?</h3>
+	        	<hr>
+		        <p>
+		        	Es prácticamente omnipresente en nuestra vida cotidiana:
+		      		<br>
+		      		<li>En la comunicación: Celulares, computadoras, internet y televisores funcionan gracias a ella.</li>
+		      		<li>En la salud: Máquinas de rayos X, monitores cardíacos y dispositivos médicos portátiles dependen de sistemas electrónicos.</li>
+		      		<li>En el transporte: Coches modernos, trenes y aviones tienen múltiples componentes electrónicos para su funcionamiento y seguridad.</li>
+		      		<li>En el hogar: Neveras, lavadoras, luces inteligentes y electrodomésticos de todo tipo la utilizan.</li>
+		      		<li>En la industria: Robots, sistemas de control y maquinaria automatizada se basan en principios electrónicos.</li>
+		        </p>
+		    </div>
+		 </section>
+        <br><BR>
+        <section class="content-block">
+	        <div class="text">
+	        	<h3>¿Dónde encontrámos indicios de la electrónica en la vida diaria?</h3>
+	        	<hr>
+		        <p>
+		        	No hace falta buscar muy lejos para verla en acción:
+		        	<li>Cuando enciendes tu celular y la pantalla se ilumina: es la electrónica que procesa la señal y muestra la imagen.</li>
+		        	<li>Cuando ajustas el termostato de tu casa para que esté más cálido o frío: un circuito electrónico regula la temperatura.</li>
+		        	<li>Cuando escuchas música en auriculares: dispositivos electrónicos convierten la información digital en sonido que podemos percibir.</li>
+		        	<li>Incluso en los semáforos de la calle: sistemas electrónicos controlan el tiempo de cada luz para organizar el tráfico.</li>
+		       		En resumen, nos ayuda a mejorar la calidad de vida, optimizar procesos y conectar al mundo.
+		       	</p>
+		    </div>
+		    <div>
+		    	<img style=" width: 300px; height: 200px;" src="https://www.thenocgroup.com/wp-content/uploads/2023/03/dispositivos_ectronicos_thenoc.jpg">
+		    </div>
+		</section>
+		<!-- Infografía interactiva sobre la historia de la electrónica -->
+		<br><br><br>
+		<div class="text">
+			<p>
+				¿Te gustaría conocer un poco de la historia de la electrónica? Aquí te presentamos una línea del tiempo:
+			</p>
+		</div>
+		<br>
+		<div style="width: 100%;">
+			<div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+				<iframe title="Historia de la Electrónica" frameborder="0" width="1200px" height="675px" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/6162072e36eee20d37231142" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> 
+			</div>
+		</div>
+		<!-- -->
+		<!-- -->
+		<br> <br> <br>
+		<h1><center>Circuitos Eléctricos</center></h1>
+		<br>
+		<section class="content-block" id="circuitos">
+			<div class="text">
+				<h3>¿Qué son los circuitos eléctricos?</h3>
+				<hr>
+				<p>
+					Un circuito eléctrico es un conjunto de componentes conectados entre sí que permiten el flujo de corriente eléctrica a través de un camino cerrado.<br>
+					Para que exista corriente, es necesario que haya una fuente de energía (como una batería o fuente de alimentación), conductores que conecten los elementos y una carga que utilice la energía eléctrica.<br>
+					Los circuitos pueden clasificarse principalmente en serie y en paralelo, dependiendo de cómo estén conectados sus componentes.<br>
+					El análisis de los circuitos eléctricos es fundamental en la electrónica, ya que permite comprender cómo interactúan el voltaje, la corriente y la resistencia dentro de un sistema.
+				</p>
+			</div>
+			<br>
+			<div class="content-block">
+			<img style=" width: 250; height: 200px;" src="https://grupopc.com/wp-content/uploads/2024/06/como-funciona-circuito-electrico.jpg">
+		</div>
+		</section> <!-- -->
+		<br>
+		<div class="text">
+			<center><h3>Clasificación de los Circuitos Eléctricos</h3>
+			<hr></center>
+		</div>
+		<br>
+		<div class="tabla-contenedor">
+	        <table class="text">
+	            <thead>
+	                <tr>
+	                    <th>Criterio</th>
+	                    <th>Tipos</th>
+	                    <th>Descripción</th>
+	                    <th>Ejemplo</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+					<!-- SEGÚN LA CONEXIÓN -->
+					<tr>
+					    <td rowspan="3"><strong>Según la conexión</strong></td>
+					    <td>Serie</td>
+					    <td>Los componentes se conectan uno después de otro en un solo camino para la corriente. Si uno falla, todos dejan de funcionar.</td>
+					    <td>Luces de Navidad antiguas</td>
+					</tr>
+					<tr>
+					    <td>Paralelo</td>
+					    <td>Los componentes se conectan en ramas separadas, por lo que la corriente se divide entre ellas. Si uno falla, los demás siguen funcionando.</td>
+					    <td>Tomacorrientes en una casa</td>
+					</tr>
+					<tr>
+					    <td>Mixto (serie-paralelo)</td>
+					    <td>Combina conexiones en serie y en paralelo.</td>
+					    <td>Circuitos de electrodomésticos complejos</td>
+					</tr>
+
+					<!-- SEGÚN SU ESTADO -->
+					<tr>
+					    <td rowspan="3"><strong>Según su estado</strong></td>
+					    <td>Cerrado</td>
+					    <td>El camino de la corriente está completo, por lo que la energía fluye y los dispositivos funcionan.</td>
+					    <td>Foco encendido</td>
+					</tr>
+					<tr>
+					    <td>Abierto</td>
+					    <td>El camino está interrumpido, por lo que no circula corriente.</td>
+					    <td>Interruptor apagado</td>
+					</tr>
+					<tr>
+					    <td>Cortocircuito</td>
+					    <td>La corriente pasa por un camino de muy baja resistencia sin carga útil, lo que puede causar sobrecalentamiento.</td>
+					    <td>Cable pelado que toca otro conductor</td>
+					</tr>
+
+					<!-- SEGÚN EL TIPO DE CORRIENTE -->
+					<tr>
+					    <td rowspan="2"><strong>Según el tipo de corriente</strong></td>
+					    <td>Corriente Continua (CC)</td>
+					    <td>La corriente fluye siempre en la misma dirección y el voltaje es constante.</td>
+					    <td>Baterías, cargadores de celular</td>
+					</tr>
+					<tr>
+					    <td>Corriente Alterna (CA)</td>
+					    <td>La dirección y magnitud de la corriente cambian periódicamente.</td>
+					    <td>Red eléctrica doméstica</td>
+					</tr>
+
+					<!-- SEGÚN SU COMPOSICIÓN -->
+					<tr>
+					    <td rowspan="2"><strong>Según su composición</strong></td>
+					    <td>Eléctricos</td>
+					    <td>Basados en componentes que manejan energía para producir trabajo mecánico, térmico o luminoso.</td>
+					    <td>Luces, motores eléctricos simples</td>
+					</tr>
+					<tr>
+					    <td>Electrónicos</td>
+					    <td>Incluyen componentes que procesan, almacenan o transmiten señales eléctricas.</td>
+					    <td>Celulares, computadoras</td>
+					</tr>
+
+					<!-- SEGÚN SU FUNCIÓN -->
+					<tr>
+					    <td rowspan="2"><strong>Según su función</strong></td>
+					    <td>Circuitos de potencia</td>
+					    <td>Proporcionan o distribuyen energía.</td>
+					    <td>Panel solar conectado a una batería</td>
+					</tr>
+					<tr>
+					    <td>Circuitos de señal</td>
+					    <td>Procesan información.</td>
+					    <td>Circuito de audio de un parlante</td>
+					</tr>
+					</tbody>
+	        </table>
+	    </div>
+    </main>
+
+    <footer class="footer">
+	    <div class="footer-contenido">
+	        <h4>Referencias</h4>
+	        <ul class="referencias">
+	            <li>García, J. (2022). <em>Fundamentos de Circuitos Eléctricos</em>. Editorial Técnica.</li>
+	            <li>Khan Academy. (2023). Conceptos básicos de electricidad.</li>
+	            <li>Serway, R. & Jewett, J. (2018). <em>Física para Ciencias e Ingeniería</em>.</li>
+	        </ul>
+
+	        <p class="copyright">
+	            © 2026 Proyecto Educativo – Electrónica Básica
+	        </p>
+	    </div>
+	</footer>
+
+
+
+	<script>
+		/* 	MENSAJE DE BIENVENIDA */
+		document.addEventListener("DOMContentLoaded", function() {
+		    const popup = document.getElementById("welcome-popup");
+		    const closeBtn = document.getElementById("close-popup");
+
+		    // Mostrar automáticamente al cargar
+		    popup.classList.add("show");
+		    // Al cerrar, solo lo ocultamos
+		    closeBtn.addEventListener("click", function() {
+		        popup.classList.remove("show");
+		    });
+		});
+
+		/* ABRE SOLO UN SUBMENÚ DEL SIDEBAR */
+        const sections = document.querySelectorAll(".sidebar-section");
+        sections.forEach(section => {
+            section.addEventListener("toggle", () => {
+                if (section.open) {
+                    sections.forEach(other => {
+                        if (other !== section) {
+                            other.removeAttribute("open");
+                        }
+                    });
+                }
+            });
+        });
+
+        /* BARRA DE BUSQUEDA*/
+	</script>
+
+</body>
+</html>

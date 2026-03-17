@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Componentes fundamentales</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsfq38SGTMg9BivYdH-0id2JxEqsjyG_lJmA&s">
+</head>
+<body>
+
+	<!-- Checkbox para mostrar/ocultar sidebar -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Header superior -->
+    <header class="topbar">
+        <div class="header-left">
+            <label for="menu-toggle" class="menu-btn">☰</label>
+            <h1 class=""><a href="index.html">Electrónica Básica</a></h1>
+        </div>
+        <!--<p>Contáctanos</p>-->
+        <img src="Logo.png" class="logo">
+    </header>
+
+    <!-- Menú / Sidebar -->
+    <aside class="sidebar">
+    	<!-- Buscador -->
+    	<div class="buscador">
+    		<input type="text" placeholder="Buscar..."></input>
+    	</div>
+
+    	<!-- Temario -->
+    	<div class="sidebar-content">
+    		<h3><center>Temario</center></h3>
+	    	<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="index.html">Electrónica</a></summary>
+		  		<div class="submenu">
+		  			<p><a href="index.html#circuitos">Circuitos Eléctricos</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Conceptos.html">Conceptos fundamentales</a></summary>
+		  		<div class="submenu">
+		  			<p><a href="Conceptos.html#carga">Carga eléctrica</a></p>
+		  			<p><a href="Conceptos.html#corriente">Corriente eléctrica</a></p>
+			    	<p><a href="Conceptos.html#potencia">Potencia eléctrica</a></p>
+			    	<p><a href="Conceptos.html#voltaje">Voltaje</a></p>
+			    	<p><a href="Conceptos.html#resistencia">Resistencia</a></p>
+			    	<p><a href="Conceptos.html#circuitos">Circuitos eléctricos</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Componentes.html">Componentes</a></summary>
+		  		<div class="submenu">
+			    	<p><a href="Componentes.html#fuente">Fuente</a></p>
+			    	<p><a href="Componentes.html#resistor">Resistor</a></p>
+			    	<p><a href="Componentes.html#capacitor">Capacitor</a></p>
+			    	<p><a href="Componentes.html#diodo">Diodo</a></p>
+			    	<p><a href="Componentes.html#transistor">Transistor</a></p>
+			    	<p><a href="Componentes.html#inductor">Inductor</a></p>
+			    	<p><a href="Componentes.html#indicador">Indicador</a></p>
+			    	<p><a href="Componentes.html#interruptor">Interruptor</a></p>
+			    	<p><a href="Componentes.html#conectores">Conectores</a></p>
+		  		</div>
+			</details>
+
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Leyes.html">Leyes</a></summary>
+			  	<div class="submenu">
+			    	<p><a href="Leyes.html#ohm">Ley de Ohm</a></p>
+			    	<p><a href="Leyes.html#kirchhoff">Leyes de Kirchhoff</a></p>
+			  	</div>
+			</details>
+
+			<div class="sidebar-section">
+		  		<p class="submenu-title"><a href="Laboratorio.html">Laboratorio</a></p>
+			</div>
+
+			<div class="sidebar-section">
+		  		<p class="submenu-title"><a href="Actividades.html">Actividades</a></p>
+			</div>
+			<!--
+			<details class="sidebar-section">
+		  		<summary class="submenu-title"><a href="Actividades.html">Actividades</a></summary>
+			  	<div class="submenu">
+			    	<p><a href="Actividades.html#electronica">Electrónica</a></p>
+			    	<p><a href="Actividades.html#conceptos">Conceptos</a></p>
+			    	<p><a href="Actividades.html#componentes">Componentes</a></p>
+			    	<p><a href="Actividades.html#leyes">Leyes</a></p>
+			  	</div>
+			</details>
+			-->
+		</div>
+    </aside>
+
+
+	<!-- Contenido -->
+	<main class="content">
+        <h1><center>Componentes Fundamentales</center></h1>
+        <h2>
+        	Los circuitos eléctricos están conformados por distintos componentes que cumplen funciones específicas dentro del sistema. Cada elemento interviene en el control, almacenamiento, transformación o conducción de la energía eléctrica, permitiendo que el circuito realice una tarea determinada.<br>
+        	Comprender la función y el comportamiento de cada componente es fundamental para el análisis y diseño de circuitos electrónicos. Desde elementos básicos como resistencias y fuentes de alimentación, hasta dispositivos como capacitores, inductores y diodos, cada uno desempeña un papel esencial en el funcionamiento del sistema.<br>
+    		En esta sección se describen los principales componentes utilizados en la electrónica básica, así como su función dentro de un circuito.
+    	</h2>
+
+    	<div class="text">
+    		<section class="tabla_conceptual">
+				<div class="fila encabezado">
+				    <div>Concepto</div>
+				    <div>Descripción</div>
+				    <div>Ilustración</div>
+				</div>
+
+				<div class="fila">
+					<div class="concepto">Fuente</div>
+					<div class="descripcion">
+						Proporcionan la energía necesaria para que funcione el circuito. Pueden ser de corriente continua (como baterías, cargadores de celular) o alterna (como los tomacorrientes de casa).<br>
+						Ejemplo: Como el tanque de agua que provee la presión necesaria para un sistema de riego.
+					</div>
+					<div class="foto">
+						<img src="https://www.zonamaker.com/images/contenido/electronica/instrumentacion/fuente_alimentacion/fuente_alimentacion_lineal_2.jpg">
+					</div>
+				</div>
+				<div class="fila">
+					<div class="concepto">Resistor</div>
+					<div class="descripcion">
+						Tambien llamadas resistencias, son dispositivos que controlan la cantidad de corriente que pasa por un circuito, "reduciendo" o limitando su flujo. Se usan para proteger otros componentes o ajustar cómo funcionan.<br>
+						Ejemplo: Como un tapón que regula el caudal de agua en una manguera.
+					</div>
+					<div class="foto">
+						<img src="https://aprende.com/wp-content/uploads/2021/07/partes-de-una-resistencia-electronica.jpg">
+					</div>
+				</div>
+				<div class="fila">
+					<div class="concepto">Capacitor</div>
+					<div class="descripcion">
+						Almacenan energía eléctrica de forma temporal y luego la liberan cuando es necesario. También ayudan a filtrar o estabilizar el voltaje en los circuitos.<br>
+						Ejemplo: Como un pequeño tanque que guarda agua para usarla cuando la presión baja.
+					</div>
+					<div class="foto">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMurt8BgplEu4MSzJj_SYGA6aHpQ0LnRL19w&s">
+					</div>
+				</div>
+				<div class="fila">
+					<div class="concepto">Diodo</div>
+					<div class="descripcion">
+						Actúan como una "puerta unidireccional": solo permiten que la corriente pase en una dirección y la bloquean en la otra. El tipo más común es el diodo rectificador, que convierte corriente alterna en continua.<br>
+						Ejemplo: Como una válvula que deja pasar el agua hacia adelante pero no hacia atrás.
+					</div>
+					<div class="foto">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Estructura_diodo_2.JPG/250px-Estructura_diodo_2.JPG">
+					</div>
+				</div>
+				<div class="fila">
+					<div class="concepto">Transistor</div>
+					<div class="descripcion">
+						Son como "interruptores electrónicos" o "amplificadores". Pueden controlar un flujo grande de corriente usando una señal pequeña, o aumentar la intensidad de señales eléctricas. Son la base de los dispositivos electrónicos modernos (como celulares o computadoras).<br>
+						Ejemplo: Como un mando a distancia que enciende una luz potente o aumenta el volumen de un parlante.
+					</div>
+					<div class="foto">
+						<img src="https://www.electronicboard.es/wp-content/uploads/2023/02/partes-del-transistor.jpeg">
+					</div>
+				</div>
+				<div class="fila">
+					<div class="concepto">Inductor</div>
+					<div class="descripcion">
+						Un inductor es un componente electrónico que almacena energía en un campo magnético cuando pasa corriente eléctrica por él. Además, se opone a cualquier cambio brusco en la cantidad de corriente que fluye a través suyo.<br>
+						Ejemplo:
+					</div>
+					<div class="foto">
+						<img src="https://www.ariat-tech.es/upfile/images/ca/20250509165741379.png">
+					</div>
+				</div>
+				<div class="fila">
+					<div class="concepto">Indicador</div>
+					<div class="descripcion">
+						Componentes que muestran si el circuito está funcionando o cuándo hay corriente pasando. Los más comunes son las bombillas incandescentes y los LEDs (diodos emisores de luz), que se encienden con la corriente.<br>
+						Ejemplo: Como la luz roja que indica que un aparato está enchufado.
+					</div>
+					<div class="foto">
+						<img src="https://m.media-amazon.com/images/I/61EwjAc24bL.jpg">
+					</div>
+				</div>
+				<div class="fila">
+					<div class="concepto">Interruptor</div>
+					<div class="descripcion">
+						Permiten abrir o cerrar el camino de la corriente en un circuito, controlando así si los dispositivos se encienden o apagan. Hay de diferentes tipos: pulsadores, palancas, táctiles, etc.<br>
+						Ejemplo: Como el grifo que abre o cierra el paso del agua.
+					</div>
+					<div class="foto">
+						<img src="https://m.media-amazon.com/images/I/61R+dJKvMzS._AC_UF894,1000_QL80_.jpg">
+					</div>
+				</div>
+				<div class="fila">
+					<div class="concepto">Conectores</div>
+					<div class="descripcion">
+						En forma de cables, los conductores llevan la corriente entre los componentes. Los conectores permiten unir o desconectar fácilmente partes del circuito (como los enchufes de un cargador).<br>
+						Ejemplo: Como las tuberías y las uniones que conectan todos los elementos de un sistema de agua.
+					</div>
+					<div class="foto">
+						<img src="https://m.media-amazon.com/images/I/51UHTkilwVL._AC_UF894,1000_QL80_.jpg">
+					</div>
+				</div>
+			</section>
+		</div>
+		<br>
+	</main>
+
+    <footer class="footer">
+	    <div class="footer-contenido">
+	        <h4>Referencias</h4>
+	        <ul class="referencias">
+	            <li>García, J. (2022). <em>Fundamentos de Circuitos Eléctricos</em>. Editorial Técnica.</li>
+	            <li>Khan Academy. (2023). Conceptos básicos de electricidad.</li>
+	            <li>Serway, R. & Jewett, J. (2018). <em>Física para Ciencias e Ingeniería</em>.</li>
+	        </ul>
+
+	        <p class="copyright">
+	            © 2026 Proyecto Educativo – Electrónica Básica
+	        </p>
+	    </div>
+	</footer>
+
+
+	<script>
+		/* ABRE SOLO UN SUBMENÚ DEL SIDEBAR */
+        const sections = document.querySelectorAll(".sidebar-section");
+        sections.forEach(section => {
+            section.addEventListener("toggle", () => {
+                if (section.open) {
+                    sections.forEach(other => {
+                        if (other !== section) {
+                            other.removeAttribute("open");
+                        }
+                    });
+                }
+            });
+        });
+	</script>
+</body>
+</html>
